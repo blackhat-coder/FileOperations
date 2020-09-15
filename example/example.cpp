@@ -1,4 +1,9 @@
-//
-// Created by Swimming In Glory on 9/15/2020.
-//
 
+#include <iostream>
+#include "../fileoperations.h"
+using namespace std;
+
+int main(){
+    fileoperate obj("path to file");
+    obj.readfile();
+}
