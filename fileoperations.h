@@ -27,7 +27,7 @@ public:
                     std::ofstream h(basefilepath);
                     h.close();
 
-                } catch (std::string *ex) {
+                } catch (...) {
                     std::cout << "Oops! Couldn't create file in " << basefilepath << " directory" << std::endl;
                 }
             }else if (reply == "n" | reply == "N"){
@@ -61,7 +61,7 @@ public:
         std::string line;
         std::ifstream r(filepath2, std::ios_base::in);
 
-        std::cout << "Merging file " << filepath2 << " to" << filepath << std::endl;
+        std::cout << "Merging file " << filepath2 << " to " << filepath << std::endl;
         while (!r.eof()){
             std::getline(r, line);
             write(line , "a");
@@ -94,6 +94,8 @@ private:
             std::getline(l, ss);
             no_of_lines += 1;
         }
+
+        l.close();
     }
 
     bool file_valid(){
