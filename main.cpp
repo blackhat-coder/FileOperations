@@ -3,5 +3,5 @@
 
 using namespace std;
 int main() {
-    fileoperate heavy(".\Lookup.txt");
+    fileoperate heavy("file location");
 }
