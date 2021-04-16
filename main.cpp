@@ -4,4 +4,5 @@
 using namespace std;
 int main() {
     fileoperate heavy("file location");
+    return 0;
 }
